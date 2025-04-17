@@ -1,0 +1,112 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --green-500: 158 36% 37%;
+  --green-700: 158 42% 18%;
+  --green: 158 42% 18%;
+
+  /* ### Neutral */
+
+  --black: 212 21% 14%;
+  --grey: 228 12% 48%;
+  --cream: 30 38% 92%;
+  --white: 0 0% 100%;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url(/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: "Montserrat";
+  color: hsl(var(--green-700));
+  background-color: hsl(var(--cream));
+  font-weight: 500;
+  font-size: 14px;
+  height: 100vh;
+}
+.card {
+  margin: 1rem;
+  max-width: 575px;
+}
+.card_hero img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.card_content {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.7rem;
+  background-color: hsl(var(--white));
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.card_label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+.card_title {
+  font-family: "Fraunces";
+  color: hsl(var(--black));
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.card_price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Fraunces";
+  color: hsl(var(--green-500));
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card_price span {
+  color: hsl(var(--black));
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.card_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  color: hsl(var(--white));
+  background-color: hsl(var(--green-500));
+  border: 0;
+  padding-block: 0.8rem;
+  border-radius: 0.6rem;
+}
+@media (min-width: 575px) {
+  .card {
+    display: flex;
+  }
+  .card_hero img {
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .card_content {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
